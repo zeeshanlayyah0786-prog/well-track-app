@@ -6,7 +6,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-green-600">Fitlytic</h1>
+              <h1 className="text-2xl font-bold text-green-600">WELL TRACK APP</h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -24,7 +24,7 @@ export default function About() {
       {/* About Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Fitlytic</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Empowering your fitness journey with smart digital tools and personalized guidance.
           </p>
@@ -34,7 +34,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-gray-600 mb-4">
-              At Fitlytic, we believe that everyone deserves access to professional-grade fitness tools 
+              At WELL TRACK APP, we believe that everyone deserves access to professional-grade fitness tools 
               and guidance. Our mission is to democratize fitness by providing cutting-edge digital 
               solutions that help you track smarter, train stronger, and live healthier.
             </p>
@@ -94,7 +94,7 @@ export default function About() {
         <div className="bg-gray-50 rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Journey?</h2>
           <p className="text-gray-600 mb-6">
-            Join thousands of users who have transformed their lives with Fitlytic.
+            Join thousands of users who have transformed their lives with WELL TRACK APP.
           </p>
           <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
             Get Started Today

@@ -279,7 +279,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
       
       <div>
         <h3 className="text-lg font-bold text-green-600 mb-2">
-          Welcome to Fitlytic! 🎉
+          Welcome to WELL TRACK APP! 🎉
         </h3>
         <p className="text-gray-600 mb-3 text-xs">
           Your order has been confirmed and you're all set to start your fitness journey with us.
@@ -427,7 +427,7 @@ const CheckoutFlow: React.FC<CheckoutFlowProps> = ({
                   onClick={onClose} 
                   className="bg-green-600 hover:bg-green-700 px-6"
                 >
-                  Start Using Fitlytic
+                  Start Using WELL TRACK APP
                 </Button>
               </div>
             )}

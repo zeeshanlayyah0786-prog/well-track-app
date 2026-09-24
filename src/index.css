@@ -73,22 +73,40 @@
   body {
     @apply bg-background text-foreground;
   }
+  ::selection {
+    @apply bg-welltrack-500/30 text-welltrack-900;
+  }
 }
 
 @layer components {
-  .bodytrack-container {
+  .welltrack-container {
     @apply container mx-auto px-4 md:px-6 max-w-7xl;
   }
   
-  .bodytrack-heading {
+  .welltrack-heading {
     @apply font-bold tracking-tight;
   }
   
-  .bodytrack-button {
-    @apply bg-bodytrack-green text-white font-medium rounded-md hover:bg-bodytrack-green-dark transition-colors duration-200;
+  .welltrack-button {
+    @apply bg-gradient-to-r from-welltrack-600 to-welltrack-500 text-white font-medium rounded-md hover:from-welltrack-700 hover:to-welltrack-600 shadow-md shadow-welltrack-600/25 transition-all duration-200;
   }
   
-  .bodytrack-section {
+  .welltrack-section {
     @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Brand gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-welltrack-400 via-welltrack-500 to-welltrack-teal bg-clip-text text-transparent;
+  }
+
+  /* Brand gradient background */
+  .bg-brand-gradient {
+    @apply bg-gradient-to-r from-welltrack-600 via-welltrack-500 to-welltrack-400;
+  }
+
+  /* Brand gradient border/glow card */
+  .brand-card {
+    @apply bg-white/5 border border-welltrack-500/20 rounded-xl backdrop-blur-sm;
   }
 }

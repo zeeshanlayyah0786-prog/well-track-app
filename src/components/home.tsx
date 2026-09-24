@@ -30,11 +30,19 @@ const HomePage = () => {
   // Testimonial data for our own implementation
   const testimonials = [
     {
+      name: "Taylor Rodriguez",
+      role: "Strength Coach",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=taylor",
+      quote:
+        "I recommend WELL TRACK APP to all my clients. The meal plans and workout guides are comprehensive and produce real results.",
+      transformation: "Gained 12lbs of muscle",
+    },
+    {
       name: "Sarah Johnson",
       role: "Fitness Enthusiast",
       image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
       quote:
-        "Fitlytic's app has transformed my approach to fitness. The personalized tracking and expert guidance keep me motivated and on track.",
+        "WELL TRACK APP's app has transformed my approach to fitness. The personalized tracking and expert guidance keep me motivated and on track.",
       transformation: "Lost 25lbs in 3 months",
     },
     {
@@ -42,23 +50,15 @@ const HomePage = () => {
       role: "Marathon Runner",
       image: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael",
       quote:
-        "As a competitive runner, I need detailed analytics to improve. Fitlytic provides everything I need to track my progress and optimize my training.",
+        "As a competitive runner, I need detailed analytics to improve. WELL TRACK APP provides everything I need to track my progress and optimize my training.",
       transformation: "Improved marathon time by 15 minutes",
-    },
-    {
-      name: "Taylor Rodriguez",
-      role: "Strength Coach",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=taylor",
-      quote:
-        "I recommend Fitlytic to all my clients. The meal plans and workout guides are comprehensive and produce real results.",
-      transformation: "Gained 12lbs of muscle",
     },
   ];
 
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Sticky Navigation */}
-      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-green-500/20">
+      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-welltrack-500/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
             <motion.div
@@ -66,8 +66,8 @@ const HomePage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <a href="#" className="text-2xl font-bold text-green-500">
-                Body Track
+              <a href="#" className="text-2xl font-bold text-gradient">
+                WELL TRACK APP
               </a>
             </motion.div>
           </div>
@@ -81,7 +81,7 @@ const HomePage = () => {
 
           <div>
             <Link to="/subscription">
-              <Button className="bg-green-500 hover:bg-green-600 text-black font-bold">
+              <Button className="bg-brand-gradient hover:opacity-95 text-white font-bold shadow-lg shadow-welltrack-500/25">
                 Sign Up
               </Button>
             </Link>
@@ -98,7 +98,7 @@ const HomePage = () => {
         {/* Features Section */}
         <section
           id="features"
-          className="py-20 bg-gradient-to-b from-black to-gray-900"
+          className="py-20 bg-gradient-to-b from-black to-welltrack-black-soft"
         >
           <div className="container mx-auto px-4">
             <motion.div
@@ -109,33 +109,33 @@ const HomePage = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">
-                Why Choose <span className="text-green-500">Body Track</span>?
+                Why Members Choose <span className="text-gradient">WELL TRACK APP</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Our digital fitness platform combines cutting-edge technology
-                with expert guidance to help you achieve your fitness goals.
+                One powerful platform — cutting-edge tracking, expert coaching,
+                and a community that keeps you moving.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-10">
               {[
                 {
+                  title: "Community Support",
+                  description:
+                    "Train alongside thousands of members in our supportive community for extra motivation.",
+                  icon: "👥",
+                },
+                {
                   title: "Personalized Tracking",
                   description:
-                    "AI-powered analytics that adapt to your progress and provide custom recommendations.",
+                    "AI-powered analytics that adapt to your progress and deliver custom recommendations.",
                   icon: "📊",
                 },
                 {
                   title: "Expert Guidance",
                   description:
-                    "Access to professional workout plans and nutrition advice designed by certified trainers.",
+                    "Professional workout plans and nutrition advice crafted by certified trainers.",
                   icon: "🏋️",
-                },
-                {
-                  title: "Community Support",
-                  description:
-                    "Join thousands of members in our supportive community to stay motivated and inspired.",
-                  icon: "👥",
                 },
               ].map((feature, index) => (
                 <motion.div
@@ -144,7 +144,7 @@ const HomePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800 p-8 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all"
+                  className="bg-welltrack-black-soft p-8 rounded-xl border border-welltrack-500/25 hover:border-welltrack-500/60 hover:shadow-lg hover:shadow-welltrack-500/10 transition-all"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -163,7 +163,7 @@ const HomePage = () => {
         {/* Subscription Plans */}
         <section
           id="subscription"
-          className="py-20 bg-gradient-to-b from-gray-900 to-black"
+          className="py-20 bg-gradient-to-b from-welltrack-black-soft to-black"
         >
           <div className="container mx-auto px-4">
             <motion.div
@@ -174,11 +174,11 @@ const HomePage = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">
-                Subscription <span className="text-green-500">Plans</span>
+                Plans Built Around <span className="text-gradient">Your Goals</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Choose the perfect plan to fuel your fitness journey with our
-                premium tracking app.
+                Flexible memberships that grow with your training — from your
+                first session to your next personal record.
               </p>
             </motion.div>
 
@@ -238,10 +238,10 @@ const HomePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`relative ${plan.popular ? "bg-gradient-to-br from-green-900/40 to-green-500/10" : "bg-gray-800"} p-8 rounded-xl border ${plan.popular ? "border-green-500" : "border-gray-700"}`}
+                  className={`relative ${plan.popular ? "bg-gradient-to-br from-welltrack-800/60 to-welltrack-500/15" : "bg-welltrack-black-soft"} p-8 rounded-xl border ${plan.popular ? "border-welltrack-500" : "border-gray-700"}`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-black px-4 py-1 rounded-full text-sm font-bold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gradient text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg shadow-welltrack-500/30">
                       Most Popular
                     </div>
                   )}
@@ -254,14 +254,14 @@ const HomePage = () => {
                   <ul className="mb-8 space-y-2">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center">
-                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-welltrack-400 mr-2">✓</span>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button
                     onClick={() => navigate('/subscription')}
-                    className={`w-full ${plan.popular ? "bg-green-500 hover:bg-green-600 text-black" : "bg-gray-700 hover:bg-gray-600"}`}
+                    className={`w-full ${plan.popular ? "bg-brand-gradient hover:opacity-95 text-white" : "bg-gray-700 hover:bg-gray-600"}`}
                   >
                     {plan.cta}
                   </Button>
@@ -276,7 +276,7 @@ const HomePage = () => {
               <Link to="/subscription">
                 <Button
                   variant="outline"
-                  className="border-green-500 text-green-500 hover:bg-green-500/10"
+                  className="border-welltrack-500 text-welltrack-400 hover:bg-welltrack-500/10"
                 >
                   Compare All Features
                 </Button>
@@ -296,11 +296,11 @@ const HomePage = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">
-                Success <span className="text-green-500">Stories</span>
+                Member Success <span className="text-gradient">Stories</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                See how Body Track has helped transform the lives of our dedicated
-                users.
+                Thousands of members train smarter with WELL TRACK APP — here
+                are a few of their stories.
               </p>
             </motion.div>
 
@@ -312,7 +312,7 @@ const HomePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800 p-6 rounded-xl border border-green-500/20"
+                  className="bg-welltrack-black-soft p-6 rounded-xl border border-welltrack-500/25"
                 >
                   <div className="flex items-center mb-6">
                     <div className="h-16 w-16 rounded-full overflow-hidden mr-4">
@@ -330,8 +330,8 @@ const HomePage = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6">"{testimonial.quote}"</p>
-                  <div className="bg-green-500/20 px-4 py-2 rounded-lg inline-block">
-                    <p className="text-green-400 font-semibold text-sm">
+                  <div className="bg-welltrack-500/20 px-4 py-2 rounded-lg inline-block">
+                    <p className="text-welltrack-400 font-semibold text-sm">
                       {testimonial.transformation}
                     </p>
                   </div>
@@ -344,7 +344,7 @@ const HomePage = () => {
         {/* About Section */}
         <section
           id="about"
-          className="py-20 bg-gradient-to-b from-black to-gray-900"
+          className="py-20 bg-gradient-to-b from-black to-welltrack-black-soft"
         >
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -355,22 +355,21 @@ const HomePage = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-4xl font-bold mb-6">
-                  About <span className="text-green-500">Body Track</span>
+                  The Story Behind <span className="text-gradient">WELL TRACK APP</span>
                 </h2>
                 <p className="text-gray-400 mb-6">
-                  Founded in 2020, Body Track was born from a simple idea: fitness
-                  tracking should be powerful yet simple. Our team of fitness
-                  professionals and tech experts came together to create digital
-                  tools that actually help people achieve their goals.
+                  WELL TRACK APP started in 2020 with one simple belief: fitness
+                  tools should be powerful yet effortless to use. Our team of
+                  coaches and engineers built the digital companion we wished
+                  already existed.
                 </p>
                 <p className="text-gray-400 mb-6">
-                  Today, we're proud to serve thousands of users worldwide with
-                  our innovative approach to fitness technology. Our mission is
-                  to make expert-level fitness tracking accessible to everyone,
-                  regardless of their experience level.
+                  Today, we're proud to serve thousands of members worldwide.
+                  Our mission is to make expert-level fitness tracking
+                  accessible to everyone, regardless of experience level.
                 </p>
                 <Link to="/about">
-                  <Button className="bg-green-500 hover:bg-green-600 text-black font-bold">
+                  <Button className="bg-brand-gradient hover:opacity-95 text-white font-bold shadow-lg shadow-welltrack-500/25">
                     Learn More About Us
                   </Button>
                 </Link>
@@ -386,13 +385,13 @@ const HomePage = () => {
                 <div className="aspect-video rounded-xl overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
-                    alt="Body Track Team"
+                    alt="WELL TRACK APP Team"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-green-500 p-6 rounded-xl">
-                  <p className="text-black font-bold text-xl">10,000+</p>
-                  <p className="text-black text-sm">Active Users</p>
+                <div className="absolute -bottom-6 -right-6 bg-brand-gradient p-6 rounded-xl shadow-xl shadow-welltrack-500/30">
+                  <p className="text-white font-bold text-xl">10,000+</p>
+                  <p className="text-white/90 text-sm">Active Users</p>
                 </div>
               </motion.div>
             </div>
@@ -410,25 +409,16 @@ const HomePage = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">
-                Fitness <span className="text-green-500">Blog</span>
+                Training <span className="text-gradient">Journal & Tips</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Expert tips, insights, and advice to help you on your fitness
-                journey.
+                Fresh ideas, science-backed guidance, and practical tips from
+                our coaching team.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                {
-                  title: "10 Nutrition Myths Debunked by Science",
-                  excerpt:
-                    "Separate fact from fiction with our evidence-based analysis of common nutrition beliefs.",
-                  image:
-                    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
-                  date: "June 12, 2023",
-                  category: "Nutrition",
-                },
                 {
                   title: "The Ultimate Guide to Progressive Overload",
                   excerpt:
@@ -444,9 +434,18 @@ const HomePage = () => {
                   excerpt:
                     "Discover why quality sleep might be more important than your workout routine.",
                   image:
-                    "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?w=800&q=80",
+                    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
                   date: "May 15, 2023",
                   category: "Recovery",
+                },
+                {
+                  title: "10 Nutrition Myths Debunked by Science",
+                  excerpt:
+                    "Separate fact from fiction with our evidence-based analysis of common nutrition beliefs.",
+                  image:
+                    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
+                  date: "June 12, 2023",
+                  category: "Nutrition",
                 },
               ].map((post, index) => (
                 <motion.div
@@ -455,7 +454,7 @@ const HomePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800 rounded-xl overflow-hidden group hover:shadow-lg hover:shadow-green-500/10 transition-all"
+                  className="bg-welltrack-black-soft rounded-xl overflow-hidden group hover:shadow-lg hover:shadow-welltrack-500/15 transition-all"
                 >
                   <div className="h-48 overflow-hidden">
                     <img
@@ -466,7 +465,7 @@ const HomePage = () => {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs text-green-500 font-semibold">
+                      <span className="text-xs text-welltrack-400 font-semibold">
                         {post.category}
                       </span>
                       <span className="text-xs text-gray-400">{post.date}</span>
@@ -475,7 +474,7 @@ const HomePage = () => {
                     <p className="text-gray-400 mb-4">{post.excerpt}</p>
                     <Link
                       to="/blog"
-                      className="text-green-500 p-0 hover:text-green-400 inline-flex items-center"
+                      className="text-welltrack-400 p-0 hover:text-welltrack-500 inline-flex items-center"
                     >
                       Read More
                     </Link>
@@ -488,7 +487,7 @@ const HomePage = () => {
               <Link to="/blog">
                 <Button
                   variant="outline"
-                  className="border-green-500 text-green-500 hover:bg-green-500/10"
+                  className="border-welltrack-500 text-welltrack-400 hover:bg-welltrack-500/10"
                 >
                   View All Articles
                 </Button>
@@ -498,26 +497,26 @@ const HomePage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <section className="py-20 bg-gradient-to-b from-welltrack-black-soft to-black">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-green-900/40 to-green-500/10 p-12 rounded-2xl border border-green-500/30 text-center"
+              className="bg-gradient-to-r from-welltrack-800/60 to-welltrack-500/15 p-12 rounded-2xl border border-welltrack-500/40 text-center"
             >
               <h2 className="text-4xl font-bold mb-4">
-                Ready to Transform Your{" "}
-                <span className="text-green-500">Fitness Journey</span>?
+                Your Strongest Year Starts{" "}
+                <span className="text-gradient">Here</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-                Join thousands of satisfied users who have taken control of
-                their health with Body Track's digital fitness tools.
+                Join thousands of members building stronger habits with WELL
+                TRACK APP's digital tools.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link to="/subscription">
-                  <Button className="bg-green-500 hover:bg-green-600 text-black font-bold text-lg px-8 py-6">
+                  <Button className="bg-brand-gradient hover:opacity-95 text-white font-bold text-lg px-8 py-6 shadow-lg shadow-welltrack-500/30">
                     Start Your Free Trial
                   </Button>
                 </Link>
@@ -536,27 +535,27 @@ const HomePage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-16">
+      <footer className="bg-welltrack-black text-white py-16 border-t border-welltrack-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-black font-bold text-lg">B</span>
+                <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-lg">W</span>
                 </div>
-                <span className="text-xl font-bold">Body Track</span>
+                <span className="text-xl font-bold">WELL TRACK APP</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
                 Track Smarter. Train Stronger. Live Healthier. Your complete digital fitness companion for achieving your health and wellness goals.
               </p>
               <div className="text-sm text-gray-400">
-                <p>Body Track App LLC</p>
-                <p>2525 Arapahoe Ave</p>
-                <p>Boulder, CO 80302, United States</p>
-                <p className="mt-2">Phone: +1 938 201 7357</p>
-                <p>Email: sales@bodytrackapp.net</p>
-                <p>Website: www.bodytrackapp.net</p>
+                <p>WELL TRACK APP LLC</p>
+                <p>2822 E 17th Ave</p>
+                <p>Denver, CO 80220, United States</p>
+                <p className="mt-2">Phone: +1 830 453-1323</p>
+                <p>Email: support@welltrackapp.fit</p>
+                <p>Website: www.welltrackapp.fit</p>
               </div>
             </div>
 
@@ -564,11 +563,11 @@ const HomePage = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#products" className="text-gray-400 hover:text-green-500 transition-colors">Products</a></li>
-                <li><a href="#subscription" className="text-gray-400 hover:text-green-500 transition-colors">Subscription</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-green-500 transition-colors">About Us</a></li>
-                <li><a href="#blog" className="text-gray-400 hover:text-green-500 transition-colors">Blog</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-green-500 transition-colors">Contact</a></li>
+                <li><a href="#products" className="text-gray-400 hover:text-welltrack-400 transition-colors">Products</a></li>
+                <li><a href="#subscription" className="text-gray-400 hover:text-welltrack-400 transition-colors">Subscription</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-welltrack-400 transition-colors">About Us</a></li>
+                <li><a href="#blog" className="text-gray-400 hover:text-welltrack-400 transition-colors">Blog</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-welltrack-400 transition-colors">Contact</a></li>
               </ul>
             </div>
 
@@ -576,11 +575,11 @@ const HomePage = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-green-500 transition-colors">FAQ</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-500 transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-500 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-500 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-500 transition-colors">Refund Policy</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">FAQ</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Help Center</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Refund Policy</a></li>
               </ul>
             </div>
           </div>
@@ -588,7 +587,7 @@ const HomePage = () => {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Body Track App LLC. All rights reserved.
+              © 2024 WELL TRACK APP LLC. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Made with ❤️ for your fitness journey</span>
@@ -604,7 +603,7 @@ const HomePage = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-green-500 text-black p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
+          className="fixed bottom-8 right-8 bg-brand-gradient text-white p-3 rounded-full shadow-lg shadow-welltrack-500/40 hover:opacity-90 transition-all z-50"
         >
           <ArrowUp size={24} />
         </motion.button>
@@ -627,7 +626,7 @@ const NavLink = ({
       className="relative text-gray-300 hover:text-white transition-colors group"
     >
       {children}
-      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full" />
+      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-welltrack-400 transition-all group-hover:w-full" />
     </a>
   );
 };

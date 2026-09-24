@@ -12,19 +12,19 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  title = "Body Track",
-  subtitle = "Digital Fitness Platform",
+  title = "WELL TRACK APP",
+  subtitle = "Your Digital Fitness Companion",
   tagline = "Track Smarter. Train Stronger. Live Healthier.",
   ctaText = "Start Your Subscription",
   ctaLink = "#subscription",
 }: HeroSectionProps) => {
   return (
-    <section className="relative w-full min-h-[700px] bg-black flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[700px] bg-welltrack-black flex items-center justify-center overflow-hidden">
       {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-black to-black z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-welltrack-600/30 via-black to-welltrack-900 z-0"></div>
       {/* Animated circles */}
       <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full bg-green-500/10 top-[-100px] right-[-100px]"
+        className="absolute w-[500px] h-[500px] rounded-full bg-welltrack-500/15 top-[-100px] right-[-100px] blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.2, 0.3],
@@ -36,7 +36,7 @@ const HeroSection = ({
         }}
       />
       <motion.div
-        className="absolute w-[300px] h-[300px] rounded-full bg-green-500/10 bottom-[-50px] left-[-50px]"
+        className="absolute w-[300px] h-[300px] rounded-full bg-welltrack-teal/10 bottom-[-50px] left-[-50px] blur-2xl"
         animate={{
           scale: [1, 1.1, 1],
           opacity: [0.2, 0.1, 0.2],
@@ -55,7 +55,7 @@ const HeroSection = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-green-500 font-bold text-xl mb-2">{subtitle}</h2>
+          <h2 className="text-gradient font-bold text-xl mb-2">{subtitle}</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             {title}
           </h1>
@@ -63,13 +63,13 @@ const HeroSection = ({
             {tagline}
           </p>
           <p className="text-white/70 text-lg mb-8 max-w-md">
-            Transform your fitness journey with our comprehensive digital tools
-            designed to help you reach your goals faster and more efficiently.
+            Train smarter with personalized tracking, expert programs and
+            nutrition tools built to help you hit your goals faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-6 rounded-md text-lg"
+              className="bg-brand-gradient hover:opacity-95 text-white font-bold px-8 py-6 rounded-md text-lg shadow-lg shadow-welltrack-500/30"
               asChild
             >
               <a href={ctaLink}>
@@ -104,9 +104,9 @@ const HeroSection = ({
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80"
-                alt="Body Track App"
-                className="h-[500px] rounded-xl shadow-2xl border border-white/10"
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&h=1000&fit=crop&q=80"
+                alt="WELL TRACK APP"
+                className="h-[500px] rounded-xl shadow-2xl border border-welltrack-500/20"
               />
             </motion.div>
 
@@ -122,9 +122,9 @@ const HeroSection = ({
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1598136490941-30d885318abd?w=600&q=80"
+                src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=640&fit=crop&q=80"
                 alt="Fitness Tracking"
-                className="h-[300px] rounded-xl shadow-2xl border border-white/10"
+                className="h-[300px] rounded-xl shadow-2xl border border-welltrack-500/20"
               />
             </motion.div>
 
@@ -140,9 +140,9 @@ const HeroSection = ({
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1594882645126-14020914d58d?w=600&q=80"
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=520&fit=crop&q=80"
                 alt="Nutrition Tracking"
-                className="h-[250px] rounded-xl shadow-2xl border border-white/10"
+                className="h-[250px] rounded-xl shadow-2xl border border-welltrack-500/20"
               />
             </motion.div>
 
@@ -161,19 +161,19 @@ const HeroSection = ({
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-wrap justify-around text-center">
             <div className="px-4 py-2">
-              <p className="text-green-500 font-bold text-2xl">10K+</p>
+              <p className="text-welltrack-400 font-bold text-2xl">10K+</p>
               <p className="text-white/70 text-sm">Active Users</p>
             </div>
             <div className="px-4 py-2">
-              <p className="text-green-500 font-bold text-2xl">500+</p>
+              <p className="text-welltrack-400 font-bold text-2xl">500+</p>
               <p className="text-white/70 text-sm">Workout Plans</p>
             </div>
             <div className="px-4 py-2">
-              <p className="text-green-500 font-bold text-2xl">300+</p>
+              <p className="text-welltrack-400 font-bold text-2xl">300+</p>
               <p className="text-white/70 text-sm">Nutrition Guides</p>
             </div>
             <div className="px-4 py-2">
-              <p className="text-green-500 font-bold text-2xl">4.8</p>
+              <p className="text-welltrack-400 font-bold text-2xl">4.8</p>
               <p className="text-white/70 text-sm">App Rating</p>
             </div>
           </div>

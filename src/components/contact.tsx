@@ -5,10 +5,10 @@ function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-fitlytic-black text-white py-16">
-        <div className="fitlytic-container">
+      <section className="bg-welltrack-black text-white py-16">
+        <div className="welltrack-container">
           <div className="max-w-3xl">
-            <h1 className="fitlytic-heading text-4xl md:text-5xl mb-4">Contact Us</h1>
+            <h1 className="welltrack-heading text-4xl md:text-5xl mb-4">Contact Us</h1>
             <p className="text-gray-300 text-lg mb-6">
               Have questions or need support? We're here to help you on your fitness journey.
             </p>
@@ -17,12 +17,12 @@ function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="fitlytic-section bg-white">
-        <div className="fitlytic-container">
+      <section className="welltrack-section bg-white">
+        <div className="welltrack-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="fitlytic-heading text-2xl mb-6">Send Us a Message</h2>
+              <h2 className="welltrack-heading text-2xl mb-6">Send Us a Quick Message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -32,7 +32,7 @@ function Contact() {
                     <input
                       type="text"
                       id="firstName"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fitlytic-green"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-welltrack-green"
                     />
                   </div>
                   <div>
@@ -42,7 +42,7 @@ function Contact() {
                     <input
                       type="text"
                       id="lastName"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fitlytic-green"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-welltrack-green"
                     />
                   </div>
                 </div>
@@ -54,7 +54,7 @@ function Contact() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fitlytic-green"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-welltrack-green"
                   />
                 </div>
                 
@@ -64,7 +64,7 @@ function Contact() {
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fitlytic-green"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-welltrack-green"
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
@@ -82,13 +82,13 @@ function Contact() {
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fitlytic-green"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-welltrack-green"
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="fitlytic-button px-6 py-3 flex items-center justify-center"
+                  className="welltrack-button px-6 py-3 flex items-center justify-center"
                 >
                   Send Message <Send size={16} className="ml-2" />
                 </button>
@@ -97,45 +97,45 @@ function Contact() {
             
             {/* Contact Information */}
             <div>
-              <h2 className="fitlytic-heading text-2xl mb-6">Contact Information</h2>
-              <div className="bg-fitlytic-gray rounded-xl p-6 mb-8">
+              <h2 className="welltrack-heading text-2xl mb-6">Reach Us Directly</h2>
+              <div className="bg-welltrack-gray rounded-xl p-6 mb-8">
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="bg-fitlytic-green/10 p-3 rounded-full mr-4">
-                      <Mail className="h-6 w-6 text-fitlytic-green" />
+                    <div className="bg-welltrack-green/10 p-3 rounded-full mr-4">
+                      <Mail className="h-6 w-6 text-welltrack-green" />
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <p className="text-gray-600">sales@bodytrackapp.net</p>
+                      <p className="text-gray-600">support@welltrackapp.fit</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-fitlytic-green/10 p-3 rounded-full mr-4">
-                      <Phone className="h-6 w-6 text-fitlytic-green" />
+                    <div className="bg-welltrack-green/10 p-3 rounded-full mr-4">
+                      <Phone className="h-6 w-6 text-welltrack-green" />
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Phone</h3>
-                      <p className="text-gray-600">+1 938 201 7357</p>
+                      <p className="text-gray-600">+1 830 453-1323</p>
                       <p className="text-gray-600">Mon-Fri, 9am-5pm MST</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-fitlytic-green/10 p-3 rounded-full mr-4">
-                      <MapPin className="h-6 w-6 text-fitlytic-green" />
+                    <div className="bg-welltrack-green/10 p-3 rounded-full mr-4">
+                      <MapPin className="h-6 w-6 text-welltrack-green" />
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Office</h3>
-                      <p className="text-gray-600">2525 Arapahoe Ave</p>
-                      <p className="text-gray-600">Boulder, CO 80302</p>
+                      <p className="text-gray-600">2822 E 17th Ave</p>
+                      <p className="text-gray-600">Denver, CO 80220</p>
                       <p className="text-gray-600">United States</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-fitlytic-green/10 p-3 rounded-full mr-4">
-                      <Clock className="h-6 w-6 text-fitlytic-green" />
+                    <div className="bg-welltrack-green/10 p-3 rounded-full mr-4">
+                      <Clock className="h-6 w-6 text-welltrack-green" />
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Hours</h3>
@@ -159,10 +159,10 @@ function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="fitlytic-section bg-fitlytic-gray">
-        <div className="fitlytic-container">
+      <section className="welltrack-section bg-welltrack-gray">
+        <div className="welltrack-container">
           <div className="text-center mb-12">
-            <h2 className="fitlytic-heading text-3xl mb-4">Frequently Asked Questions</h2>
+            <h2 className="welltrack-heading text-3xl mb-4">Quick Answers</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Find quick answers to common questions about our products and services.
             </p>
@@ -204,7 +204,7 @@ function Contact() {
             
             <div className="text-center mt-8">
               <p className="text-gray-600">
-                Still have questions? <a href="#" className="text-fitlytic-green font-medium">Check our full FAQ page</a> or contact our support team.
+                Still have questions? <a href="#" className="text-welltrack-green font-medium">Check our full FAQ page</a> or contact our support team.
               </p>
             </div>
           </div>

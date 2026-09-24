@@ -40,13 +40,13 @@ export default function Layout({ children }: LayoutProps) {
             : "bg-transparent py-4"
         }`}
       >
-        <div className="fitlytic-container flex items-center justify-between">
+        <div className="welltrack-container flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-fitlytic-green flex items-center justify-center">
-              <span className="text-white font-bold text-xl">F</span>
+            <div className="w-10 h-10 rounded-full bg-brand-gradient flex items-center justify-center shadow-md shadow-welltrack-500/30">
+              <span className="text-white font-bold text-xl">W</span>
             </div>
-            <span className="text-fitlytic-black font-bold text-xl">Fitlytic</span>
+            <span className="text-welltrack-black font-bold text-xl">WELL TRACK APP</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-fitlytic-black hover:text-fitlytic-green font-medium transition-colors duration-200"
+                className="text-welltrack-black hover:text-welltrack-green font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -66,7 +66,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="hidden md:block">
             <Link
               to="/subscription"
-              className="fitlytic-button px-6 py-2"
+              className="welltrack-button px-6 py-2"
             >
               Start Free Trial
             </Link>
@@ -74,7 +74,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-fitlytic-black"
+            className="md:hidden text-welltrack-black"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,12 +84,12 @@ export default function Layout({ children }: LayoutProps) {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 py-4">
-            <div className="fitlytic-container flex flex-col space-y-4">
+            <div className="welltrack-container flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-fitlytic-black hover:text-fitlytic-green font-medium py-2 transition-colors duration-200"
+                  className="text-welltrack-black hover:text-welltrack-green font-medium py-2 transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -97,7 +97,7 @@ export default function Layout({ children }: LayoutProps) {
               ))}
               <Link
                 to="/subscription"
-                className="fitlytic-button px-6 py-2 text-center"
+                className="welltrack-button px-6 py-2 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Start Free Trial
@@ -111,25 +111,25 @@ export default function Layout({ children }: LayoutProps) {
       <main className="flex-grow pt-16">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-fitlytic-black text-white">
-        <div className="fitlytic-container py-12">
+      <footer className="bg-welltrack-black text-white">
+        <div className="welltrack-container py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-fitlytic-green rounded-full flex items-center justify-center mr-3">
-                  <span className="text-black font-bold text-lg">F</span>
+                <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center mr-3 shadow-md shadow-welltrack-500/30">
+                  <span className="text-black font-bold text-lg">W</span>
                 </div>
-                <span className="text-xl font-bold">Fitlytic</span>
+                <span className="text-xl font-bold">WELL TRACK APP</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
                 Track Smarter. Train Stronger. Live Healthier. Your complete digital fitness companion for achieving your health and wellness goals.
               </p>
               <div className="text-sm text-gray-400">
-                <p>Fitlytic Health LLC</p>
-                <p>2345 Main St</p>
-                <p>Superior, CO 80027, United States</p>
-                <p className="mt-2">Phone: +1 334 359 4503</p>
+                <p>WELL TRACK APP LLC</p>
+                <p>2822 E 17th Ave</p>
+                <p>Denver, CO 80220, United States</p>
+                <p className="mt-2">Phone: +1 830 453-1323</p>
               </div>
             </div>
 
@@ -137,11 +137,11 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link to="/products" className="text-gray-400 hover:text-fitlytic-green transition-colors">Products</Link></li>
-                <li><Link to="/subscription" className="text-gray-400 hover:text-fitlytic-green transition-colors">Subscription</Link></li>
-                <li><Link to="/about" className="text-gray-400 hover:text-fitlytic-green transition-colors">About Us</Link></li>
-                <li><Link to="/blog" className="text-gray-400 hover:text-fitlytic-green transition-colors">Blog</Link></li>
-                <li><Link to="/contact" className="text-gray-400 hover:text-fitlytic-green transition-colors">Contact</Link></li>
+                <li><Link to="/products" className="text-gray-400 hover:text-welltrack-green transition-colors">Products</Link></li>
+                <li><Link to="/subscription" className="text-gray-400 hover:text-welltrack-green transition-colors">Subscription</Link></li>
+                <li><Link to="/about" className="text-gray-400 hover:text-welltrack-green transition-colors">About Us</Link></li>
+                <li><Link to="/blog" className="text-gray-400 hover:text-welltrack-green transition-colors">Blog</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-welltrack-green transition-colors">Contact</Link></li>
               </ul>
             </div>
 
@@ -149,11 +149,11 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><Link to="/faq" className="text-gray-400 hover:text-fitlytic-green transition-colors">FAQ</Link></li>
-                <li><Link to="/contact" className="text-gray-400 hover:text-fitlytic-green transition-colors">Help Center</Link></li>
-                <li><Link to="/privacy" className="text-gray-400 hover:text-fitlytic-green transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-gray-400 hover:text-fitlytic-green transition-colors">Terms of Service</Link></li>
-                <li><Link to="/refund" className="text-gray-400 hover:text-fitlytic-green transition-colors">Refund Policy</Link></li>
+                <li><Link to="/faq" className="text-gray-400 hover:text-welltrack-green transition-colors">FAQ</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-welltrack-green transition-colors">Help Center</Link></li>
+                <li><Link to="/privacy" className="text-gray-400 hover:text-welltrack-green transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="text-gray-400 hover:text-welltrack-green transition-colors">Terms of Service</Link></li>
+                <li><Link to="/refund" className="text-gray-400 hover:text-welltrack-green transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Layout({ children }: LayoutProps) {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Fitlytic Health LLC. All rights reserved.
+              © 2024 WELL TRACK APP LLC. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Made with ❤️ for your fitness journey</span>

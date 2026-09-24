@@ -296,7 +296,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ product, onClose }) => {
         <CardFooter className="flex flex-col space-y-2 px-4 pt-2 flex-shrink-0">
           <Button 
             type="submit" 
-            className="w-full bg-fitlytic-green hover:bg-green-700 h-8 text-sm"
+            className="w-full bg-welltrack-green hover:bg-green-700 h-8 text-sm"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Processing..." : "Complete Purchase"}

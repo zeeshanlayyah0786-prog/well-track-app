@@ -79,20 +79,20 @@ function Subscription() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-fitlytic-black text-white py-16">
-        <div className="fitlytic-container">
+      <section className="bg-welltrack-black text-white py-16">
+        <div className="welltrack-container">
           <div className="max-w-3xl">
-            <h1 className="fitlytic-heading text-4xl md:text-5xl mb-4">Subscription Plans</h1>
+            <h1 className="welltrack-heading text-4xl md:text-5xl mb-4">Membership Plans</h1>
             <p className="text-gray-300 text-lg mb-6">
-              Choose the perfect plan to help you achieve your fitness goals with our comprehensive tracking app.
+              Pick the membership that matches your goals — every plan starts with a 14-day free trial.
             </p>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="fitlytic-section bg-white">
-        <div className="fitlytic-container">
+      <section className="welltrack-section bg-white">
+        <div className="welltrack-container">
           {/* Billing Toggle */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 p-1 rounded-full inline-flex">
@@ -100,7 +100,7 @@ function Subscription() {
                 onClick={() => setBillingCycle("monthly")}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                   billingCycle === "monthly"
-                    ? "bg-fitlytic-green text-white"
+                    ? "bg-welltrack-green text-white"
                     : "text-gray-700"
                 }`}
               >
@@ -110,7 +110,7 @@ function Subscription() {
                 onClick={() => setBillingCycle("annual")}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                   billingCycle === "annual"
-                    ? "bg-fitlytic-green text-white"
+                    ? "bg-welltrack-green text-white"
                     : "text-gray-700"
                 }`}
               >
@@ -126,12 +126,12 @@ function Subscription() {
                 key={plan.name} 
                 className={`rounded-xl overflow-hidden border ${
                   plan.popular 
-                    ? 'border-fitlytic-green shadow-lg shadow-fitlytic-green/10' 
+                    ? 'border-welltrack-green shadow-lg shadow-welltrack-green/10' 
                     : 'border-gray-200'
                 }`}
               >
                 {plan.popular && (
-                  <div className="bg-fitlytic-green text-white py-2 text-center text-sm font-medium">
+                  <div className="bg-welltrack-green text-white py-2 text-center text-sm font-medium">
                     MOST POPULAR
                   </div>
                 )}
@@ -154,7 +154,7 @@ function Subscription() {
                     onClick={() => handleStartTrial(plan)}
                     className={`w-full py-2 rounded-md font-medium mb-6 ${
                       plan.popular 
-                        ? 'bg-fitlytic-green text-white hover:bg-fitlytic-green-dark' 
+                        ? 'bg-welltrack-green text-white hover:bg-welltrack-green-dark' 
                         : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                     }`}
                   >
@@ -166,7 +166,7 @@ function Subscription() {
                     <ul className="space-y-2 mb-6">
                       {plan.features.map((feature, index) => (
                         <li key={index} className="flex items-start">
-                          <CheckCircle size={18} className="text-fitlytic-green mr-2 flex-shrink-0 mt-0.5" />
+                          <CheckCircle size={18} className="text-welltrack-green mr-2 flex-shrink-0 mt-0.5" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
@@ -196,7 +196,7 @@ function Subscription() {
               All plans include a 14-day free trial. No credit card required to start. Cancel anytime.
             </p>
             <p className="text-sm text-gray-500">
-              By subscribing, you agree to our <Link to="/terms" className="text-fitlytic-green hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-fitlytic-green hover:underline">Privacy Policy</Link>. 
+              By subscribing, you agree to our <Link to="/terms" className="text-welltrack-green hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-welltrack-green hover:underline">Privacy Policy</Link>. 
               Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period.
             </p>
           </div>
@@ -204,12 +204,12 @@ function Subscription() {
       </section>
 
       {/* FAQ Section */}
-      <section className="fitlytic-section bg-fitlytic-gray">
-        <div className="fitlytic-container">
+      <section className="welltrack-section bg-welltrack-gray">
+        <div className="welltrack-container">
           <div className="text-center mb-12">
-            <h2 className="fitlytic-heading text-3xl mb-4">Frequently Asked Questions</h2>
+            <h2 className="welltrack-heading text-3xl mb-4">Membership Questions Answered</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our subscription plans.
+              Everything you need to know before you start your free trial.
             </p>
           </div>
           

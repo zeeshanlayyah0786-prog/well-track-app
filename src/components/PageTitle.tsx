@@ -6,19 +6,19 @@ const PageTitle = () => {
 
   useEffect(() => {
     const titles: { [key: string]: string } = {
-      '/': 'Body Track - Digital Fitness Platform | Track Smarter. Train Stronger.',
-      '/products': 'Products - Workout Guides & Meal Plans | Body Track',
-      '/subscription': 'Subscription Plans - Premium Fitness Access | Body Track',
-      '/about': 'About Us - Meet the Body Track Team | Body Track',
-      '/blog': 'Fitness Blog - Tips & Insights | Body Track',
-      '/contact': 'Contact Us - Get in Touch | Body Track',
-      '/faq': 'FAQ - Frequently Asked Questions | Body Track',
-      '/terms': 'Terms of Service | Body Track',
-      '/privacy': 'Privacy Policy | Body Track',
-      '/refund': 'Refund Policy | Body Track'
+      '/': 'WELL TRACK APP - Digital Fitness Platform | Track Smarter. Train Stronger.',
+      '/products': 'Products - Premium Digital Fitness Library | WELL TRACK APP',
+      '/subscription': 'Membership Plans - Premium Fitness Access | WELL TRACK APP',
+      '/about': 'About Us - Meet the WELL TRACK APP Team | WELL TRACK APP',
+      '/blog': 'Training Journal - Tips & Insights | WELL TRACK APP',
+      '/contact': 'Contact Us - Get in Touch | WELL TRACK APP',
+      '/faq': 'FAQ - Frequently Asked Questions | WELL TRACK APP',
+      '/terms': 'Terms of Service | WELL TRACK APP',
+      '/privacy': 'Privacy Policy | WELL TRACK APP',
+      '/refund': 'Refund Policy | WELL TRACK APP'
     };
 
-    const title = titles[location.pathname] || 'Body Track - Digital Fitness Platform';
+    const title = titles[location.pathname] || 'WELL TRACK APP - Digital Fitness Platform';
     document.title = title;
   }, [location.pathname]);
 
