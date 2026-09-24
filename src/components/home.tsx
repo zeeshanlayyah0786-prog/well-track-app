@@ -66,17 +66,17 @@ const HomePage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <a href="#" className="text-2xl font-bold text-gradient">
+              <Link to="/" className="text-2xl font-bold text-gradient">
                 WELL TRACK APP
-              </a>
+              </Link>
             </motion.div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <NavLink href="#products">Products</NavLink>
-            <NavLink href="#subscription">Subscription Plans</NavLink>
-            <NavLink href="#about">About Us</NavLink>
-            <NavLink href="#blog">Blog</NavLink>
+            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/subscription">Subscription Plans</NavLink>
+            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
           </nav>
 
           <div>
@@ -563,11 +563,11 @@ const HomePage = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#products" className="text-gray-400 hover:text-welltrack-400 transition-colors">Products</a></li>
-                <li><a href="#subscription" className="text-gray-400 hover:text-welltrack-400 transition-colors">Subscription</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-welltrack-400 transition-colors">About Us</a></li>
-                <li><a href="#blog" className="text-gray-400 hover:text-welltrack-400 transition-colors">Blog</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-welltrack-400 transition-colors">Contact</a></li>
+                <li><Link to="/products" className="text-gray-400 hover:text-welltrack-400 transition-colors">Products</Link></li>
+                <li><Link to="/subscription" className="text-gray-400 hover:text-welltrack-400 transition-colors">Subscription</Link></li>
+                <li><Link to="/about" className="text-gray-400 hover:text-welltrack-400 transition-colors">About Us</Link></li>
+                <li><Link to="/blog" className="text-gray-400 hover:text-welltrack-400 transition-colors">Blog</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-welltrack-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
 
@@ -575,11 +575,11 @@ const HomePage = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">FAQ</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-welltrack-400 transition-colors">Refund Policy</a></li>
+                <li><Link to="/faq" className="text-gray-400 hover:text-welltrack-400 transition-colors">FAQ</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-welltrack-400 transition-colors">Help Center</Link></li>
+                <li><Link to="/privacy" className="text-gray-400 hover:text-welltrack-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="text-gray-400 hover:text-welltrack-400 transition-colors">Terms of Service</Link></li>
+                <li><Link to="/refund" className="text-gray-400 hover:text-welltrack-400 transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
           </div>
@@ -614,20 +614,20 @@ const HomePage = () => {
 
 // Navigation Link component with hover effect
 const NavLink = ({
-  href,
+  to,
   children,
 }: {
-  href: string;
+  to: string;
   children: React.ReactNode;
 }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={to}
       className="relative text-gray-300 hover:text-white transition-colors group"
     >
       {children}
       <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-welltrack-400 transition-all group-hover:w-full" />
-    </a>
+    </Link>
   );
 };
 

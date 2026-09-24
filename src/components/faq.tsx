@@ -1,4 +1,5 @@
 import Layout from "./layout";
+import { Link } from "react-router-dom";
 
 export default function FAQ() {
   const faqs = [
@@ -62,12 +63,12 @@ export default function FAQ() {
               <p className="text-gray-600 mb-6">
                 Our support team is here to help you get the most out of WELL TRACK APP.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="welltrack-button inline-block px-6 py-3"
               >
                 Contact Support
-              </a>
+              </Link>
             </div>
           </div>
         </div>

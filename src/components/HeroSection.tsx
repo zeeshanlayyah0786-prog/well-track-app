@@ -16,7 +16,7 @@ const HeroSection = ({
   subtitle = "Your Digital Fitness Companion",
   tagline = "Track Smarter. Train Stronger. Live Healthier.",
   ctaText = "Start Your Subscription",
-  ctaLink = "#subscription",
+  ctaLink = "/subscription",
 }: HeroSectionProps) => {
   return (
     <section className="relative w-full min-h-[700px] bg-welltrack-black flex items-center justify-center overflow-hidden">
@@ -82,7 +82,7 @@ const HeroSection = ({
               className="border-white/30 text-white hover:bg-white/10 font-medium px-8 py-6 rounded-md text-lg bg-amber-300"
               asChild
             >
-              <a href="#products">
+              <a href="/products">
                 Explore Products <ChevronRight className="ml-1 h-5 w-5" />
               </a>
             </Button>

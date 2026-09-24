@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
@@ -10,11 +12,11 @@ export default function About() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="/products" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
-                <a href="/subscription" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Subscription</a>
-                <a href="/about" className="text-green-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                <a href="/blog" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                <Link to="/" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link to="/products" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Products</Link>
+                <Link to="/subscription" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Subscription</Link>
+                <Link to="/about" className="text-green-600 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link to="/blog" className="text-gray-900 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
               </div>
             </div>
           </div>
@@ -96,9 +98,9 @@ export default function About() {
           <p className="text-gray-600 mb-6">
             Join thousands of users who have transformed their lives with WELL TRACK APP.
           </p>
-          <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+          <Link to="/subscription" className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block">
             Get Started Today
-          </button>
+          </Link>
         </div>
       </div>
     </div>

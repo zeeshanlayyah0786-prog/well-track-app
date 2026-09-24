@@ -1,4 +1,5 @@
 import Layout from "./layout";
+import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 function Contact() {
@@ -204,7 +205,7 @@ function Contact() {
             
             <div className="text-center mt-8">
               <p className="text-gray-600">
-                Still have questions? <a href="#" className="text-welltrack-green font-medium">Check our full FAQ page</a> or contact our support team.
+                Still have questions? <Link to="/faq" className="text-welltrack-green font-medium">Check our full FAQ page</Link> or contact our support team.
               </p>
             </div>
           </div>
